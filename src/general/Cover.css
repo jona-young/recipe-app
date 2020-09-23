@@ -1,0 +1,55 @@
+.cover {
+}
+
+.cover__coverImage {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(237, 240, 238);
+    width: 100%;
+    height: 40vw;
+    object-fit: cover;
+}
+
+.cover__coverAbout {
+    position: absolute;
+    top: 125px;
+    left: 50px;
+    height: 25vw;
+    width: 50vw;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: rgba(54, 54, 54, 60%)
+}
+
+.cover__coverAboutTitle {
+    font-family: 'Roboto Slab', serif;
+    font-size: 4vw;
+    font-weight: 900;
+    padding-bottom: 15px;
+    color: rgb(237, 240, 238);
+}
+
+.cover__coverAboutText {
+    font-size: 2.2vw;
+    font-family: 'Oswald', sans-serif;
+    color: rgb(237, 240, 238);
+}
+
+@media screen and (max-width: 650px) {
+    .cover__coverAboutTitle {
+        font-size: 6vw;
+    }
+
+    .cover__coverAboutText {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .cover__coverAbout {
+        position: absolute;
+        top: 100px;
+        padding: 10px;
+    }
+}
