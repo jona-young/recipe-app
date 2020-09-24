@@ -36,6 +36,30 @@
     color: rgb(237, 240, 238);
 }
 
+.cover__coverCred {
+    width: 100%;
+    height: 5vw;
+    background: rgb(237, 240, 238);
+}
+
+.cover__coverCredBox {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.1vw;
+    text-align: center;
+    margin: auto;
+    background-color: rgba(79, 79, 79, 60%);
+    color: rgb(237, 240, 238);
+    padding-top: 0.5vw;
+    width: 30vw;
+    height: 2vw;
+}
+
+.cover__coverLink {
+    text-decoration: none;
+    color: rgb(38, 37, 37);
+}
+
 @media screen and (max-width: 650px) {
     .cover__coverAboutTitle {
         font-size: 6vw;

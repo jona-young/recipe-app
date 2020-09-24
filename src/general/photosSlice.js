@@ -4,30 +4,19 @@ import {
 } from '@reduxjs/toolkit';
 
 const initialState = {
-    photo: '',
+    photos: [],
     status: 'idle',
     error: null,
 }
 
-/*TODO: ADD ATTRIBUTION INTO STATE WITH @Photographer and recipes-app as referral
-TODO - The @PHOTOGRAPHER will have to be pulled from the fetch as an array(?) then
-TODO - added under fetchRandomPhotos.fulfilled
-
-Photo by <a href="https://unsplash.com/@anniespratt?utm_source=recipes-app&utm_medium=referral">
-            Annie Spratt
-         </a>
-         on
-         <a href="https://unsplash.com/?utm_source=your_app_name&utm_medium=referral">
-            Unsplash
-         </a>
-*/
-export const fetchRandomPhotos = createAsyncThunk('photos/fetchRandomPhotos', async () =>{
-    localStorage.clear()
+//TODO - pass parameter in async() in order to pull search term from spoontacular API to find Unsplash photo
+export const fetchRandomPhotos = createAsyncThunk('photos/fetchRandomPhotos', async () => {
     return fetch('https://api.unsplash.com/photos/random/?client_id=cw1ZZ185SThdLPcEx7g4IherAzt-SFN9EdBKWOnjq-0&query=food&orientation=landscape')
         .then(res => res.json())
         .then((result) => {
-            console.log(result.urls.regular)
-            return result.urls.regular
+            console.log("Unsplash Random API Call: ", result)
+            const resCoverPhoto = [result.urls.regular, result.user.username]
+            return resCoverPhoto
         }, (error) => {
             console.log(error)
         })
@@ -43,7 +32,7 @@ const photosSlice = createSlice({
         },
         [fetchRandomPhotos.fulfilled]: (state, action) => {
             state.status = 'succeeded'
-            state.photo = action.payload
+            state.photos = action.payload
 
         },
         [fetchRandomPhotos.rejected]: (state, action) => {
@@ -51,9 +40,8 @@ const photosSlice = createSlice({
             state.error = action.error.message
         }
     }
-
 })
 
 export default photosSlice.reducer;
 
-export const selectRandomPhoto = state => state.photos.photo
+export const selectPhotosRandom = state => state.photos.photos
