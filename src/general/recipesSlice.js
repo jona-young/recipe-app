@@ -41,3 +41,6 @@ const recipesSlice = createSlice({
 export default recipesSlice.reducer;
 
 export const selectRecipesRandom = state => state.recipes.recipes;
+
+export const selectRecipeById = (state, recipeId) =>
+    state.recipes.recipes.find((recipe) => recipe.id === recipeId)

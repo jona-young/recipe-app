@@ -22,8 +22,8 @@ function RecipesRandom () {
     if (recipesStatus === 'loading') {
         content = <div className="loader">Loading...</div>
     } else if (recipesStatus === 'succeeded') {
-        content = recipesRandom.map(recipe => (
-            <SingleRecipe key={recipe} recipe={recipe} />
+        content = recipesRandom.map(recipeId => (
+            <SingleRecipe key={recipeId.id} recipeId={recipeId} />
         ))
     } else if (recipesStatus === 'error') {
         content = <div>{error}</div>

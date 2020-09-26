@@ -30,6 +30,10 @@
     object-fit: contain;
 }
 
+.recipes__boxLink {
+    text-decoration: none;
+}
+
 .recipes__boxText {
     font-family: 'Ubuntu', sans-serif;
     font-size: 1.4vw;
