@@ -42,3 +42,10 @@
     padding: 3% 10% 0;
     color: #212020;
 }
+
+.loader {
+    font-family: 'Roboto Slab', serif;
+    font-size: 3vw;
+    font-weight: 900;
+    color: #212020;
+}

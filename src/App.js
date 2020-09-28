@@ -6,6 +6,7 @@ import {
     Redirect
 } from 'react-router-dom';
 import Header from './general/Header.js';
+import Footer from './general/Footer.js';
 import MainContent from './general/MainContent.js';
 import PageRecipe from './general/PageRecipe.js';
 import './App.css';
@@ -23,6 +24,7 @@ function App() {
                 <Redirect to="/" />
             </Switch>
         </div>
+        <Footer />
     </Router>
   );
 }

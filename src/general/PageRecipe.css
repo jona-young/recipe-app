@@ -1,0 +1,26 @@
+.pagerecipe {
+    padding: 3% 10%;
+    background-color: rgb(237, 240, 238);
+    height: 80vw;
+
+}
+
+.pagerecipe__title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 3vw;
+
+}
+
+.pagerecipe__image {
+    width:21vw;
+    height: 15vw;
+    object-fit: contain;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+}
+
+.pagerecipe__instructions {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5vw;
+}

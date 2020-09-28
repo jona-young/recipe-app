@@ -9,8 +9,9 @@
     font-family: 'Oswald', sans-serif;
 }
 
-.header__left {
+.header__headerLink {
     display: flex;
+    text-decoration: none;
 }
 
 .header__icon {
@@ -27,12 +28,5 @@
     font-weight: 700;
     font-size: 20px;
     text-align: center;
-}
-
-.header__right{
-}
-
-.header__link {
-    padding: 0 10px;
-    text-decoration: none
+    color: black;
 }
