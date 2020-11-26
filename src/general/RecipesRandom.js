@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import SingleRecipe from './SingleRecipe.js';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchRecipesRandom, selectRecipesRandom } from './recipesSlice.js';
-
 import './RecipesRandom.css';
 
 function RecipesRandom () {

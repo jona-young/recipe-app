@@ -9,8 +9,8 @@ function SingleRecipe ({recipeId}) {
 
     return (
         <div className="recipes__contentBox">
-            <img className="recipes__boxImg" src={ recipe.image } alt={ recipe.id } />
             <Link to={`/recipes/${recipe.id}`} className="recipes__boxLink">
+                <img className="recipes__boxImg" src={ recipe.image } alt={ recipe.id } />
                 <p className="recipes__boxText">{ recipe.title }</p>
             </Link>
         </div>
